@@ -26,18 +26,42 @@ namespace CommandsPr
 
         private void Sit_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show("Сижу");
-            _currentButton = random.Next(3);
+            var newButton = random.Next(3);
+            if (newButton != _currentButton)
+            {
+                MessageBox.Show("Сижу", "Ok", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Meow", "не-а", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            _currentButton = newButton;
         }
         private void Lay_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show("Лежу");
-            _currentButton = random.Next(3);
+            var newButton = random.Next(3);
+            if (newButton != _currentButton)
+            {
+                MessageBox.Show("Лежу", "Ok", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Meow", "не-а", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            _currentButton = newButton;
         }
         private void Voice_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show("Гав-гав");
-            _currentButton = random.Next(3);
+            var newButton = random.Next(3);
+            if (newButton != _currentButton)
+            {
+                MessageBox.Show("Гав-гав", "Ok", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("", "...", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            _currentButton = newButton;
         }
         
         private void Sit_CanExecute(object sender, CanExecuteRoutedEventArgs e)
